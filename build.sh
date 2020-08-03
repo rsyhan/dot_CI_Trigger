@@ -48,5 +48,11 @@ echo "Uploading"
 echo
 
 cd ~
-curl -sL https://git.io/file-transfer | sh
-./transfer bit kernel/EpicHook-*.zip
+git config --global user.email "yuhan@rsyhan.me"
+git config --global user.name "Yuhan Zhang"
+git clone https://$GIT_ID:$GIT_PWD@github.com/rsyhan/Yuhan_OnePlus7Pro_Kernel
+mkdir Yuhan_OnePlus7Pro_Kernel/Flyme-sm6150-$rel_date-$short_commit
+cp ~/kernel/EpicHook*.zip Yuhan_OnePlus7Pro_Kernel/Flyme-sm6150-$rel_date-$short_commit
+cd Yuhan_OnePlus7Pro_Kernel
+git add . && git commit -s -m "[Flyme-sm6150-$rel_date] Redmi K20 EpicHook Kernel Drone CI Release $short_commit" --signoff
+git push https://$GIT_ID:$GIT_PWD@github.com/rsyhan/Yuhan_OnePlus7Pro_Kernel HEAD:master
