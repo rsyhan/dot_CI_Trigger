@@ -20,7 +20,7 @@ short_commit="$(cut -c-8 <<< "$(git rev-parse HEAD)")"
 echo
 echo "Setting defconfig"
 echo
-make vendor/lineage_davinci_defconfig || exit 1
+make epichook_defconfig || exit 1
 
 echo
 echo "Compiling"
