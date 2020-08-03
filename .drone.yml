@@ -20,7 +20,7 @@ steps:
     commands:
       - cd /drone/src
       - apt update && apt install -y bc bison curl flex gcc git g++ libssl-dev liblz4-1 libyaml-0-2 make p7zip-full zip zipalign
-      - git clone https://github.com/arter97/arm64-gcc build-tools/arm64-gcc --depth 1
-      - git clone https://github.com/arter97/arm32-gcc build-tools/arm32-gcc --depth 1
-      - git clone https://$GIT_ID:$GIT_PWD@github.com/rsyhan/priv_Flyme_sm6150 -b develop-caf kernel --depth 1
+      - git clone https://github.com/alk3p/aarch64-elf-gcc_9.x build-tools/arm64-gcc --depth 1
+      - git clone https://github.com/alk3p/arm-eabi-gcc_9.x build-tools/arm32-gcc --depth 1
+      - git clone https://$GIT_ID:$GIT_PWD@github.com/rsyhan/priv_Flyme_sm6150 -b develop-oss kernel --depth 1
       - bash ./build.sh
