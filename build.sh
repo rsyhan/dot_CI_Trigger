@@ -10,6 +10,7 @@ export CROSS_COMPILE_ARM32=~/build-tools/arm32-gcc/bin/arm-eabi-
 export KBUILD_BUILD_USER=HanyanI
 export KBUILD_BUILD_HOST=EpicHook-Build
 export KJOBS="$((`grep -c '^processor' /proc/cpuinfo` * 2))"
+cp ~/build-tools/dtc /usr/bin/dtc
 
 # Build
 cd ~/kernel
