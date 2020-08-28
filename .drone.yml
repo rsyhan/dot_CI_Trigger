@@ -19,8 +19,8 @@ steps:
         from_secret: GITPWD
     commands:
       - cd /drone/src
-      - apt update && apt install -y bc bison curl flex gcc git g++ libssl-dev liblz4-1 libyaml-0-2 make p7zip-full zip zipalign
-      - git clone https://github.com/arter97/arm64-gcc build-tools/arm64-gcc --depth 1
-      - git clone https://github.com/arter97/arm32-gcc build-tools/arm32-gcc --depth 1
-      - git clone https://$GIT_ID:$GIT_PWD@github.com/rsyhan/priv_Flyme_sm6150 -b bisect kernel --depth 1
-      - bash ./build.sh
+      - apt update && apt install -y curl git
+      - git clone https://github.com/MiCode/Xiaomi_Kernel_OpenSource -b cas-q-oss
+      - cd Xiaomi_Kernel_OpenSource
+      - git push https://github.com/rsyhan/android_kernel_xiaomi_sm8250 HEAD:cas-q-oss
+     
