@@ -20,7 +20,7 @@ steps:
     commands:
       - cd /drone/src
       - apt update && apt install -y curl git
-      - git clone https://github.com/MiCode/Xiaomi_Kernel_OpenSource -b cas-q-oss
-      - cd Xiaomi_Kernel_OpenSource
-      - git push https://$GIT_ID:$GIT_PWD@github.com/rsyhan/android_kernel_xiaomi_sm8250 HEAD:cas-q-oss
+      - git clone https://github.com/HyperTeam/android_kernel_realme_sm8150
+      - cd android_kernel_realme_sm8150
+      - git push https://$GIT_ID:$GIT_PWD@github.com/rsyhan/miui_kernel_realme_sm8150 HEAD:miui
 
